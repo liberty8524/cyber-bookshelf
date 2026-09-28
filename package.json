@@ -1,0 +1,21 @@
+{
+  "name": "digital-bookshelf",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "postinstall": "node scripts/copy-pdf-assets.mjs",
+    "test": "node --check frontend/main.js && node --check frontend/auth.js && node --check frontend/reader.js && node --check frontend/components/bookDesign.js && node --check frontend/components/bookMotion.js",
+    "test:accounts": "node scripts/check-accounts-ui.mjs",
+    "test:visual": "node scripts/check-visual-ui.mjs"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^5.4.149",
+    "lucide": "^0.468.0"
+  },
+  "devDependencies": {
+    "vite": "^7.1.7"
+  }
+}

@@ -1,0 +1,72 @@
+/* Room chrome stays quiet; the shelf is the visual centre. */
+.room-header,.room-main { width:min(1400px,100%); margin:auto; padding-inline:58px }
+.room-header { height:82px; display:flex; align-items:center; gap:28px; border-bottom:1px solid var(--line) }
+.brand { display:flex; gap:11px; align-items:center; text-decoration:none; color:var(--text); font:500 25px var(--font); letter-spacing:4px; flex-shrink:0 }
+.brand-icon { display:grid; place-items:center; width:36px; height:38px; color:var(--accent); border:1px solid var(--accent); border-radius:10px 10px 3px 3px; box-shadow:inset 0 0 0 3px var(--bg) }
+.brand-icon svg { width:23px; height:23px }
+.brand small { display:block; font:7px var(--ui-font); letter-spacing:2px; margin-top:5px }
+.nav-note { margin-right:auto; color:var(--muted); font:11px var(--font); letter-spacing:1.5px }
+.theme-trigger { margin-left:auto; color:var(--muted); gap:9px; white-space:nowrap }
+.theme-trigger .theme-dot { width:12px; height:12px; border-radius:50%; background:linear-gradient(135deg,var(--inner-light) 50%,var(--accent) 50%); box-shadow:0 0 0 3px var(--panel-soft) }
+.theme-trigger>svg:last-child { width:12px }
+.account-area { display:flex; align-items:center; gap:10px; padding-left:21px; border-left:1px solid var(--line) }
+.account-avatar { display:grid; place-items:center; width:29px; height:29px; border-radius:50%; background:var(--panel-soft); color:var(--accent); font:12px var(--font); flex-shrink:0 }
+.account-name { max-width:110px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:11px }
+.logout-button { font-size:10px; color:var(--muted); padding:7px; white-space:nowrap }
+.intro { display:flex; align-items:center; justify-content:space-between; gap:30px; padding:29px 0 25px }
+.intro-copy { display:flex; flex-direction:column; gap:7px }
+.intro .eyebrow { font-size:8px; letter-spacing:2.7px }
+.intro-line { display:flex; align-items:baseline; gap:24px }
+h1 { margin:0; font:400 31px/1.55 var(--font); letter-spacing:1.4px }
+h1 span { color:var(--brass) }
+.intro p { margin:0; font-size:11px; color:var(--muted); letter-spacing:.3px }
+.add-book { font-size:11px; padding:11px 18px; white-space:nowrap }
+.add-book svg { width:16px; height:16px }
+.toolbar { display:flex; align-items:center; justify-content:space-between; gap:20px; margin-bottom:22px }
+.categories { display:flex; align-items:center; gap:4px }
+.category { border:1px solid transparent; padding:8px 14px; background:transparent; color:var(--muted); border-radius:var(--button-radius); font-size:11px; white-space:nowrap; transition:background .2s,color .2s }
+.category:hover { background:var(--shade); color:var(--text) }
+.category.active { background:var(--panel-soft); border-color:var(--line); color:var(--accent) }
+.category span { display:inline-block; margin-left:8px; font-size:9px; opacity:.7 }
+.search { display:flex; align-items:center; gap:10px; border-bottom:1px solid var(--line); padding:8px 2px 8px 10px; color:var(--muted); transition:border-color .25s }
+.search:focus-within { border-color:var(--accent) }
+.search svg { width:15px }
+.search input { width:174px; border:0; outline:0; background:transparent; color:var(--text); font-size:11px }
+.search input::placeholder { color:var(--muted) }
+.search kbd { font-size:9px; border:1px solid var(--line); border-radius:3px; padding:1px 5px; margin-right:7px }
+.room-footer { display:flex; justify-content:space-between; gap:20px; padding:23px 0 27px; color:var(--muted); font-size:9px; letter-spacing:.7px }
+.room-footer em { margin:0 10px; opacity:.5 }
+#recent { font-size:9px }
+/* Theme chooser: an actual room preview, not a colour dot. */
+#theme-menu { position:fixed; top:68px; right:150px; z-index:35; width:304px; padding:13px; background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow-panel); }
+#theme-menu:not([hidden]) { animation:menuIn .2s var(--ease-out) }
+.menu-heading { display:flex; align-items:center; justify-content:space-between; margin:5px 8px 12px; }
+.menu-label { font-size:11px; color:var(--text) }
+.menu-heading small { font-size:8px; letter-spacing:1.4px; color:var(--muted) }
+#theme-menu button { width:100%; display:flex; align-items:center; gap:13px; padding:10px; margin:3px 0; border:1px solid transparent; background:transparent; border-radius:calc(var(--radius) * .65); text-align:left; transition:background .2s,border-color .2s; }
+#theme-menu button:hover { background:var(--panel-soft) }
+#theme-menu .chosen { border-color:var(--line); background:var(--panel-soft) }
+.theme-names { flex:1; font-size:12px; color:var(--text) }
+.theme-names small { display:block; font-size:9px; color:var(--muted); margin-top:4px; letter-spacing:.4px }
+#theme-menu button>svg { width:16px; color:var(--accent) }
+.theme-preview { display:flex; gap:3px; align-items:flex-end; width:59px; height:41px; padding:7px 9px; border-radius:4px; background:var(--inner-light); border:4px solid var(--wood); box-shadow:inset 0 3px 5px var(--recess-shadow); flex-shrink:0 }
+.theme-preview i { width:7px; height:19px; background:var(--book-color-0); border-radius:1px }
+.theme-preview i:nth-child(2) { height:15px; background:var(--book-color-1) }
+.theme-preview i:nth-child(3) { height:21px; background:var(--book-color-2) }
+.theme-preview i:nth-child(4) { height:17px; background:var(--book-color-3) }
+@keyframes menuIn { from { opacity:0; transform:translateY(-5px) } to { opacity:1; transform:none } }
+@media(min-width:1600px) { .room-header,.room-main { width:min(1530px,100%); padding-inline:65px }.intro { padding-block:33px } }
+@media(max-width:1100px) { .room-header,.room-main { padding-inline:32px }.nav-note { display:none }.intro-line { gap:15px }.intro p { font-size:10px }.category { padding-inline:11px }.search input { width:150px } }
+@media(max-width:900px) { .intro-line { display:block }.intro p { margin-top:4px }.categories { gap:1px }.category { padding-inline:9px }.search input { width:133px }.room-header { gap:18px }.account-name { max-width:86px } }
+@media(max-width:640px) {
+  .room-header,.room-main { padding-inline:18px }.room-header { height:72px; gap:12px }
+  .brand { font-size:22px; letter-spacing:3px; gap:8px }.brand small { font-size:6px; letter-spacing:1.2px }.brand-icon { width:29px; height:32px }.brand-icon svg { width:20px }
+  .theme-trigger { gap:5px; padding:9px }.theme-trigger .theme-label { display:none }
+  .account-area { gap:4px; padding-left:10px }.account-name { display:none }.account-avatar { width:26px; height:26px }.logout-button { font-size:10px }
+  .intro { padding:25px 0 21px; gap:12px }.intro .eyebrow { font-size:6px; letter-spacing:1.6px }h1 { font-size:25px }.intro p { font-size:10px; max-width:225px }.add-book { padding:10px; font-size:0 }.add-book svg { width:19px }
+  .toolbar { flex-direction:column-reverse; align-items:stretch; gap:16px; margin-bottom:18px }
+  .search input { width:100% }.search { padding-left:2px }.search kbd { display:none }
+  .categories { gap:3px; overflow-x:auto; scrollbar-width:none }.category { padding:8px 10px; font-size:10px; flex-shrink:0 }.category span { margin-left:5px }
+  .room-footer { font-size:8px; padding-block:20px }#recent { display:none }
+  #theme-menu { width:min(304px,calc(100vw - 28px)); right:14px!important; top:64px!important }
+}

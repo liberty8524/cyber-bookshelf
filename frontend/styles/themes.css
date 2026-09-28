@@ -1,0 +1,66 @@
+/* A theme is a complete room palette. Components only consume these tokens. */
+:root, [data-theme="modern"] {
+  color-scheme: light;
+  --bg:#f4f3ed; --panel:#fcfbf6; --panel-soft:#ebece3; --text:#303c32; --muted:#7a8174;
+  --accent:#48614c; --accent-ink:#fafaf2; --line:#d8dbcf; --shade:#4451350d; --danger:#a85848;
+  --font:Georgia,'Noto Serif SC','SimSun',serif; --ui-font:'Segoe UI','Microsoft YaHei',sans-serif;
+  --radius:8px; --room-radius:8px; --button-radius:6px;
+  --ambient:#ffffff88; --wall-glow:#dce2cd55; --light:#fff1c378; --light-line:#fff1c7;
+  --wood:#b69368; --wood-light:#cfb48c; --wood-edge:#a98b62; --wood-deep:#705339;
+  --inner:#bea580; --inner-light:#deceb0; --shelf-ink:#64553d; --grain-opacity:.24;
+  --recess-shadow:#3d2b1959; --board-shadow:#5c452a4d; --brass:#a78b52;
+  --shadow-sm:0 3px 8px #292e2110; --shadow-panel:0 22px 80px #1d281c2b;
+  --shadow-room:0 28px 42px -22px #57472866,0 2px 5px #57472825;
+  --book-color-0:#566653; --book-ink-0:#eee3be; --book-color-1:#ab735e; --book-ink-1:#fff0d3;
+  --book-color-2:#ded2ad; --book-ink-2:#544d37; --book-color-3:#42565b; --book-ink-3:#e6dec5;
+  --book-color-4:#978c72; --book-ink-4:#fff1d4; --book-color-5:#e3d9c3; --book-ink-5:#68604b;
+  --book-color-6:#7b594c; --book-ink-6:#f6deb3; --book-color-7:#899181; --book-ink-7:#f7f0da;
+  --book-foil:#e4c991; --texture-strength:.18; --emboss-opacity:.55;
+  --transition-room:450ms ease; --ease-out:cubic-bezier(.22,.72,.18,1);
+}
+[data-theme="classic"] {
+  --bg:#ede3d0; --panel:#f5eddc; --panel-soft:#e4d8bf; --text:#453a2b; --muted:#8c795b;
+  --accent:#3e5141; --accent-ink:#f3e4c3; --line:#d3c4a6; --shade:#6c512b0e;
+  --font:'Palatino Linotype',Georgia,'SimSun',serif; --radius:4px; --room-radius:5px; --button-radius:4px;
+  --ambient:#ffeed367; --wall-glow:#d4b78033; --light:#efb94e62; --light-line:#efca79;
+  --wood:#4b3026; --wood-light:#75523a; --wood-edge:#3a261d; --wood-deep:#241810;
+  --inner:#392a21; --inner-light:#624a33; --shelf-ink:#d4b886; --grain-opacity:.48;
+  --recess-shadow:#160d09bd; --board-shadow:#2718109e; --brass:#c5a365;
+  --shadow-panel:0 24px 85px #2b1a124d; --shadow-room:0 30px 55px -18px #3c26117a,0 2px 6px #25170f60;
+  --book-color-0:#2e493c; --book-ink-0:#ddc088; --book-color-1:#703d3c; --book-ink-1:#ecd19a;
+  --book-color-2:#bda679; --book-ink-2:#47381f; --book-color-3:#324348; --book-ink-3:#dbbd87;
+  --book-color-4:#67503a; --book-ink-4:#e2c190; --book-color-5:#ccbd98; --book-ink-5:#55452c;
+  --book-color-6:#7c5535; --book-ink-6:#ead0a0; --book-color-7:#626449; --book-ink-7:#e1c595;
+  --book-foil:#d8ad65; --texture-strength:.36; --emboss-opacity:.85;
+}
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg:#1b2228; --panel:#252e33; --panel-soft:#30393b; --text:#e2e3db; --muted:#a0a99f;
+  --accent:#bca06b; --accent-ink:#222a2b; --line:#3b4547; --shade:#d6c19b0c; --danger:#c47b68;
+  --font:Georgia,'SimSun',serif; --radius:7px; --room-radius:6px; --button-radius:5px;
+  --ambient:#7188990a; --wall-glow:#72859912; --light:#c99c4938; --light-line:#d9b771;
+  --wood:#242b2c; --wood-light:#454b46; --wood-edge:#1e2423; --wood-deep:#121919;
+  --inner:#1c2427; --inner-light:#343d3b; --shelf-ink:#b3aa91; --grain-opacity:.32;
+  --recess-shadow:#060a0dc7; --board-shadow:#070a0bd6; --brass:#aa905b;
+  --shadow-panel:0 30px 100px #0009; --shadow-room:0 32px 55px -18px #000b,0 0 0 1px #afb0920d;
+  --book-color-0:#34483e; --book-ink-0:#d9c7a1; --book-color-1:#634544; --book-ink-1:#e0c6ac;
+  --book-color-2:#aca18b; --book-ink-2:#30362f; --book-color-3:#354a5a; --book-ink-3:#d8dfdd;
+  --book-color-4:#645f4b; --book-ink-4:#e6d2a9; --book-color-5:#848d86; --book-ink-5:#142b28;
+  --book-color-6:#51434b; --book-ink-6:#d8c6bb; --book-color-7:#4b5b5c; --book-ink-7:#e3d3b3;
+  --book-foil:#c3a46a; --texture-strength:.25; --emboss-opacity:.65;
+}
+[data-theme="cozy"] {
+  --bg:#faf0e7; --panel:#fff8ee; --panel-soft:#f1e1d5; --text:#6b5149; --muted:#9a7d6d;
+  --accent:#aa756a; --accent-ink:#fff7e8; --line:#e7d5c7; --shade:#b98d730d;
+  --font:'Segoe UI','Microsoft YaHei',sans-serif; --radius:15px; --room-radius:20px; --button-radius:18px;
+  --ambient:#fff3d887; --wall-glow:#efc7af44; --light:#fff0c682; --light-line:#fff4d6;
+  --wood:#d4b392; --wood-light:#ecd5b7; --wood-edge:#c49e7d; --wood-deep:#a87e60;
+  --inner:#d4b99d; --inner-light:#efddc6; --shelf-ink:#947259; --grain-opacity:.16;
+  --recess-shadow:#8b5a3645; --board-shadow:#9a64463d; --brass:#be9568;
+  --shadow-panel:0 24px 80px #86594b29; --shadow-room:0 26px 40px -20px #ab76514d,0 2px 5px #986d4020;
+  --book-color-0:#9ca98d; --book-ink-0:#314d36; --book-color-1:#d7a89a; --book-ink-1:#603f39;
+  --book-color-2:#edd7af; --book-ink-2:#665233; --book-color-3:#a1b5b5; --book-ink-3:#354f51;
+  --book-color-4:#b8ac95; --book-ink-4:#504934; --book-color-5:#ece1cb; --book-ink-5:#7b6550;
+  --book-color-6:#c2adb9; --book-ink-6:#59414f; --book-color-7:#cfbb8e; --book-ink-7:#675330;
+  --book-foil:#8b7251; --texture-strength:.12; --emboss-opacity:.35;
+}

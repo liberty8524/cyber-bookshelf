@@ -1,0 +1,32 @@
+name: digital-bookshelf
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    environment:
+      BOOKSHELF_DATA_DIR: /app/data
+      BOOKSHELF_COOKIE_SECURE: "1"
+      BOOKSHELF_PUBLIC_ORIGIN: https://${BOOKSHELF_DOMAIN:?请在 .env 中设置域名}
+    volumes:
+      - bookshelf_data:/app/data
+    expose:
+      - "8000"
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    depends_on:
+      app:
+        condition: service_healthy
+    environment:
+      BOOKSHELF_DOMAIN: ${BOOKSHELF_DOMAIN:?请在 .env 中设置域名}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+volumes:
+  bookshelf_data:
+  caddy_data:
+  caddy_config:
